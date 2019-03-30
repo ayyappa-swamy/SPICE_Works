@@ -1,0 +1,15 @@
+* D:\Repos\SPICE_Works\4_60.asc
+Q1 Vout N002 N003 0 rNPN
+VIN N002 0 0
+VCC N001 0 2.5
+RC N001 Vout 1k
+Q2 0 0 N003 0 rPNP
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\KH2166\Documents\LTspiceXVII\lib\cmp\standard.bjt
+.model rNPN NPN(IS=5E-16 Bf=100 VAf=5)
+* Ans) When VIN = 0.25V Q1 is in edge of saturation
+.model rPNP PNP(IS=8E-16 Bf=50 VAf=3.5)
+.dc VIN 0 2 0.01
+.backanno
+.end

@@ -1,0 +1,13 @@
+* D:\Repos\SPICE_Works\4_58.asc
+Q1 N001 N002 Vout 0 rNPN
+VIN N002 0 0
+VCC N001 0 2.5
+RC Vout 0 1k
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\KH2166\Documents\LTspiceXVII\lib\cmp\standard.bjt
+.model rNPN NPN(IS=5E-16 Bf=100 VAf=5)
+.dc VIN 0 2.5 0.005
+* Ans) Vout vs Vin is exponential from 0.7V. Ic is 1mA when Vin is 1.74V
+.backanno
+.end

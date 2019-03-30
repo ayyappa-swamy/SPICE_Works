@@ -1,0 +1,12 @@
+* D:\Repos\SPICE_Works\4_59_a.asc
+Q1 N001 N002 0 0 rNPN
+VCC N001 0 2.5
+VIN N002 0 0
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\KH2166\Documents\LTspiceXVII\lib\cmp\standard.bjt
+.model rNPN NPN(IS=5E-16 Bf=100 VAf=5)
+.dc VIN 0 1.8 0.0005
+* Ans) See the answer in 4_59_b.asc
+.backanno
+.end

@@ -1,0 +1,17 @@
+* D:\Repos\SPICE_Works\4_61.asc
+Q2 Vout N002 N003 0 rNPN2
+VB N002 0 1.5
+VCC N001 0 2.5
+RC N001 Vout 1k
+Q1 N001 N004 N003 0 rNPN1
+RC1 N003 0 1k
+VIN N004 0 0
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\KH2166\Documents\LTspiceXVII\lib\cmp\standard.bjt
+.model rNPN2 NPN(IS=5E-16 Bf=100 VAf=5)
+* Ans) When VIN = 1.4980V, the collector currents of Q1 and Q2 are equal
+.dc VIN 0 2.5 0.01
+.model rNPN1 NPN(IS=5E-16 Bf=100 VAf=5)
+.backanno
+.end
